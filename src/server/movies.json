@@ -1,0 +1,393 @@
+{
+    "page": 1,
+    "results": [
+        {
+            "adult": false,
+            "backdrop_path": "/j9LCCCMec4M3lYRKFmksfMfTVZq.jpg",
+            "genre_ids": [
+                18,
+                9648,
+                53
+            ],
+            "id": 9613,
+            "original_language": "en",
+            "original_title": "Spider",
+            "overview": "A mentally disturbed man takes residence in a halfway house. His mind gradually slips back into the realm created by his illness, where he replays a key part of his childhood.",
+            "popularity": 10.432,
+            "poster_path": "/zvm4WuYxTiGkRagRqHUey0meRQL.jpg",
+            "release_date": "2002-11-06",
+            "title": "Spider",
+            "video": false,
+            "vote_average": 6.651,
+            "vote_count": 749
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                27
+            ],
+            "id": 1002644,
+            "original_language": "en",
+            "original_title": "Spider",
+            "overview": "Desperate to win a man's affections, Roshanda James uses murder and witchcraft to make herself appear as a beautiful seductress. No man can resist the Black Widow Spider.",
+            "popularity": 2.162,
+            "poster_path": "/jireX9062do8ETnOxYcFcvse1fY.jpg",
+            "release_date": "2022-05-12",
+            "title": "Spider",
+            "video": false,
+            "vote_average": 6.386,
+            "vote_count": 22
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/f99HWL82rx25jOiVE5jo5qA6OjF.jpg",
+            "genre_ids": [
+                18,
+                35,
+                28
+            ],
+            "id": 55825,
+            "original_language": "en",
+            "original_title": "Spider",
+            "overview": "A young man tries to make things right again in his relationship after he and his girlfriend get in a fight.",
+            "popularity": 5.643,
+            "poster_path": "/97jePhTnH2pHBh4nPfH5aapOsX0.jpg",
+            "release_date": "2007-06-17",
+            "title": "Spider",
+            "video": false,
+            "vote_average": 6.6,
+            "vote_count": 101
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/4HodYYKEIsGOdinkGi2Ucz6X9i0.jpg",
+            "genre_ids": [
+                16,
+                28,
+                12
+            ],
+            "id": 569094,
+            "original_language": "en",
+            "original_title": "Spider-Man: Across the Spider-Verse",
+            "overview": "After reuniting with Gwen Stacy, Brooklyn’s full-time, friendly neighborhood Spider-Man is catapulted across the Multiverse, where he encounters the Spider Society, a team of Spider-People charged with protecting the Multiverse’s very existence. But when the heroes clash on how to handle a new threat, Miles finds himself pitted against the other Spiders and must set out on his own to save those he loves most.",
+            "popularity": 452.417,
+            "poster_path": "/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg",
+            "release_date": "2023-05-31",
+            "title": "Spider-Man: Across the Spider-Verse",
+            "video": false,
+            "vote_average": 8.406,
+            "vote_count": 4940
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [],
+            "id": 615750,
+            "original_language": "en",
+            "original_title": "Spider",
+            "overview": "After being fired by his ruthless boss, the dangerously vulnerable David is forced to confront the looming loss of his terminally ill mother, Annie, as well as his own relentless demons.",
+            "popularity": 0.662,
+            "poster_path": "/4rQKbZHaSGY2iABxitdJtnO8iMT.jpg",
+            "release_date": "2019-06-25",
+            "title": "Spider",
+            "video": false,
+            "vote_average": 6.6,
+            "vote_count": 9
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [],
+            "id": 425682,
+            "original_language": "en",
+            "original_title": "Spider",
+            "overview": "16mm, colour, silent.",
+            "popularity": 0.84,
+            "poster_path": null,
+            "release_date": "1979-11-11",
+            "title": "Spider",
+            "video": false,
+            "vote_average": 6.875,
+            "vote_count": 8
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                53,
+                27
+            ],
+            "id": 1173580,
+            "original_language": "en",
+            "original_title": "Spider",
+            "overview": "Mustafa Khan, a chartered accountant, is left stranded in a jungle with only a mobile phone after being kidnapped for ransom money. As he tries to find his way out, he must confront a giant spider and rely on his resourcefulness to survive.",
+            "popularity": 0.6,
+            "poster_path": "/jyxffjyh6B1EjBM8J1EL6cEg4Yl.jpg",
+            "release_date": "2023-05-31",
+            "title": "Spider",
+            "video": false,
+            "vote_average": 6.0,
+            "vote_count": 1
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/14QbnygCuTO0vl7CAFmPf1fgZfV.jpg",
+            "genre_ids": [
+                28,
+                12,
+                878
+            ],
+            "id": 634649,
+            "original_language": "en",
+            "original_title": "Spider-Man: No Way Home",
+            "overview": "Peter Parker is unmasked and no longer able to separate his normal life from the high-stakes of being a super-hero. When he asks for help from Doctor Strange the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man.",
+            "popularity": 330.508,
+            "poster_path": "/5weKu49pzJCt06OPpjvT80efnQj.jpg",
+            "release_date": "2021-12-15",
+            "title": "Spider-Man: No Way Home",
+            "video": false,
+            "vote_average": 7.985,
+            "vote_count": 18534
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/jHxCeXnSchAuwHnmVatTgqMYdX8.jpg",
+            "genre_ids": [
+                14,
+                28
+            ],
+            "id": 557,
+            "original_language": "en",
+            "original_title": "Spider-Man",
+            "overview": "After being bitten by a genetically altered spider at Oscorp, nerdy but endearing high school student Peter Parker is endowed with amazing powers to become the superhero known as Spider-Man.",
+            "popularity": 99.076,
+            "poster_path": "/gh4cZbhZxyTbgxQPxD0dOudNPTn.jpg",
+            "release_date": "2002-05-01",
+            "title": "Spider-Man",
+            "video": false,
+            "vote_average": 7.283,
+            "vote_count": 17815
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/qGQf2OHIkoh89K8XeKQzhxczf96.jpg",
+            "genre_ids": [
+                28,
+                12,
+                16,
+                878
+            ],
+            "id": 324857,
+            "original_language": "en",
+            "original_title": "Spider-Man: Into the Spider-Verse",
+            "overview": "Struggling to find his place in the world while juggling school and family, Brooklyn teenager Miles Morales is unexpectedly bitten by a radioactive spider and develops unfathomable powers just like the one and only Spider-Man. While wrestling with the implications of his new abilities, Miles discovers a super collider created by the madman Wilson \"Kingpin\" Fisk, causing others from across the Spider-Verse to be inadvertently transported to his dimension.",
+            "popularity": 121.378,
+            "poster_path": "/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg",
+            "release_date": "2018-12-06",
+            "title": "Spider-Man: Into the Spider-Verse",
+            "video": false,
+            "vote_average": 8.405,
+            "vote_count": 14239
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/hDvqcbZhq9ux0euxYxCP9N6m1Rh.jpg",
+            "genre_ids": [
+                28,
+                12,
+                14
+            ],
+            "id": 102382,
+            "original_language": "en",
+            "original_title": "The Amazing Spider-Man 2",
+            "overview": "For Peter Parker, life is busy. Between taking out the bad guys as Spider-Man and spending time with the person he loves, Gwen Stacy, high school graduation cannot come quickly enough. Peter has not forgotten about the promise he made to Gwen’s father to protect her by staying away, but that is a promise he cannot keep. Things will change for Peter when a new villain, Electro, emerges, an old friend, Harry Osborn, returns, and Peter uncovers new clues about his past.",
+            "popularity": 94.084,
+            "poster_path": "/dGjoPttcbKR5VWg1jQuNFB247KL.jpg",
+            "release_date": "2014-04-16",
+            "title": "The Amazing Spider-Man 2",
+            "video": false,
+            "vote_average": 6.5,
+            "vote_count": 12451
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/fn4n6uOYcB6Uh89nbNPoU2w80RV.jpg",
+            "genre_ids": [
+                28,
+                12,
+                878,
+                18
+            ],
+            "id": 315635,
+            "original_language": "en",
+            "original_title": "Spider-Man: Homecoming",
+            "overview": "Following the events of Captain America: Civil War, Peter Parker, with the help of his mentor Tony Stark, tries to balance his life as an ordinary high school student in Queens, New York City, with fighting crime as his superhero alter ego Spider-Man as a new threat, the Vulture, emerges.",
+            "popularity": 103.035,
+            "poster_path": "/c24sv2weTHPsmDa7jEMN0m2P3RT.jpg",
+            "release_date": "2017-07-05",
+            "title": "Spider-Man: Homecoming",
+            "video": false,
+            "vote_average": 7.343,
+            "vote_count": 20652
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/5aI6KMzlg59OCvoA6hUOBoIh8S8.jpg",
+            "genre_ids": [
+                28,
+                12,
+                14
+            ],
+            "id": 1930,
+            "original_language": "en",
+            "original_title": "The Amazing Spider-Man",
+            "overview": "Peter Parker is an outcast high schooler abandoned by his parents as a boy, leaving him to be raised by his Uncle Ben and Aunt May. Like most teenagers, Peter is trying to figure out who he is and how he got to be the person he is today. As Peter discovers a mysterious briefcase that belonged to his father, he begins a quest to understand his parents' disappearance – leading him directly to Oscorp and the lab of Dr. Curt Connors, his father's former partner. As Spider-Man is set on a collision course with Connors' alter ego, The Lizard, Peter will make life-altering choices to use his powers and shape his destiny to become a hero.",
+            "popularity": 83.985,
+            "poster_path": "/BgcvtsVWLQfjHD6Dr3YYgeSLYk.jpg",
+            "release_date": "2012-06-23",
+            "title": "The Amazing Spider-Man",
+            "video": false,
+            "vote_average": 6.693,
+            "vote_count": 16468
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/w1oD1MzHjnBJc5snKupIQaSBLIh.jpg",
+            "genre_ids": [
+                14,
+                28,
+                12
+            ],
+            "id": 559,
+            "original_language": "en",
+            "original_title": "Spider-Man 3",
+            "overview": "The seemingly invincible Spider-Man goes up against an all-new crop of villains—including the shape-shifting Sandman. While Spider-Man’s superpowers are altered by an alien organism, his alter ego, Peter Parker, deals with nemesis Eddie Brock and also gets caught up in a love triangle.",
+            "popularity": 78.106,
+            "poster_path": "/qFmwhVUoUSXjkKRmca5yGDEXBIj.jpg",
+            "release_date": "2007-05-01",
+            "title": "Spider-Man 3",
+            "video": false,
+            "vote_average": 6.402,
+            "vote_count": 13224
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/ng6SSB3JhbcpKTwbPDsRwUYK8Cq.jpg",
+            "genre_ids": [
+                28,
+                12,
+                878
+            ],
+            "id": 429617,
+            "original_language": "en",
+            "original_title": "Spider-Man: Far From Home",
+            "overview": "Peter Parker and his friends go on a summer trip to Europe. However, they will hardly be able to rest - Peter will have to agree to help Nick Fury uncover the mystery of creatures that cause natural disasters and destruction throughout the continent.",
+            "popularity": 81.034,
+            "poster_path": "/4q2NNj4S5dG2RLF9CpXsej7yXl.jpg",
+            "release_date": "2019-06-28",
+            "title": "Spider-Man: Far From Home",
+            "video": false,
+            "vote_average": 7.444,
+            "vote_count": 14635
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/dp4jcu2tlAyJnJNnCyHXnWnqhUl.jpg",
+            "genre_ids": [
+                80,
+                18,
+                53
+            ],
+            "id": 889699,
+            "original_language": "fa",
+            "original_title": "عنکبوت مقدس",
+            "overview": "A journalist descends into the dark underbelly of the Iranian holy city of Mashhad as she investigates the serial killings of sex workers by the so called \"Spider Killer\", who believes he is cleansing the streets of sinners.",
+            "popularity": 25.38,
+            "poster_path": "/6ObJ4x7m1F5QRY06WzOxNJQHwGb.jpg",
+            "release_date": "2022-07-13",
+            "title": "Holy Spider",
+            "video": false,
+            "vote_average": 7.375,
+            "vote_count": 259
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/jegxYJazPlJLkOfQYrjHvkTiqoJ.jpg",
+            "genre_ids": [
+                27,
+                878,
+                14
+            ],
+            "id": 83188,
+            "original_language": "en",
+            "original_title": "Camel Spiders",
+            "overview": "Based on actual creatures that for years have tormented our armed forces in the Middle East, these creatures have now invaded the southwestern deserts of the United States. The Camel Spiders now freely hunt for prey, unafraid of any predator - including man. No place is safe no one is beyond their paralyzing sting. In the end, a small band of hearty fighters are forced to make one last stand against the creatures.",
+            "popularity": 8.349,
+            "poster_path": "/d4kEoQoBrJkVa6MAeB6Lkrttuhn.jpg",
+            "release_date": "2011-03-04",
+            "title": "Camel Spiders",
+            "video": false,
+            "vote_average": 4.59,
+            "vote_count": 50
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/nJxzyDkpvr8keVZD1TtNMubMiwH.jpg",
+            "genre_ids": [
+                53
+            ],
+            "id": 835786,
+            "original_language": "zh",
+            "original_title": "巨蛛",
+            "overview": "In a mysterious laboratory located in the desert, the experimental spiders used for genetic research mutate and turn into giant spider monsters, turning the laboratory into a giant spider's lair. A few days later, a special warfare team led by the captain Gao Qiang, escorting Dr. Chen, a scientist of the Kwon Plant Group, goes to the laboratory to rescue the trapped people and try to retrieve the relevant scientific research data",
+            "popularity": 11.184,
+            "poster_path": "/5ApvzOzDQHMvrp59tOiCF2yLh7d.jpg",
+            "release_date": "2021-05-30",
+            "title": "Giant Spider",
+            "video": false,
+            "vote_average": 7.2,
+            "vote_count": 62
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/8YTbDLjcIpCvBjiUa1yYFFUhwGX.jpg",
+            "genre_ids": [
+                99,
+                80
+            ],
+            "id": 1183166,
+            "original_language": "fr",
+            "original_title": "Vjeran Tomic: L'homme-araignée de Paris",
+            "overview": "In his own words, the burglar behind the 2010 robbery of the Paris Museum of Modern Art tells how he pulled off the biggest art heist in French history.",
+            "popularity": 18.178,
+            "poster_path": "/sv0Pzq9Kdv3NBZNdKnEu9xOdcT4.jpg",
+            "release_date": "2023-10-20",
+            "title": "Vjeran Tomic: The Spider-Man of Paris",
+            "video": false,
+            "vote_average": 6.948,
+            "vote_count": 29
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/jpFrCKa0ssa7Sm7l8J5fZcDRiwX.jpg",
+            "genre_ids": [
+                53,
+                18
+            ],
+            "id": 916283,
+            "original_language": "de",
+            "original_title": "Die Schwarze Spinne",
+            "overview": "The courageous young midwife Christine makes a pact with the devil to save her village from the brutal terror of the Teutonic Knights. Punished by a spider plague, Christine goes from savior to hunted.",
+            "popularity": 7.034,
+            "poster_path": "/w0GjWn94mtzKOV1T1ae0MfOHnHo.jpg",
+            "release_date": "2022-03-10",
+            "title": "The Black Spider",
+            "video": false,
+            "vote_average": 5.8,
+            "vote_count": 6
+        }
+    ],
+    "total_pages": 18,
+    "total_results": 356
+}
