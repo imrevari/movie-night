@@ -3,13 +3,15 @@ const app = express()
 var axios = require('axios')
 
 const router = express.Router()
-const {EXTERNAL_API_URL, MOVIE_PARAM, END_PARAMS, LOOKUP_TIME_SECONDS} = require('./constants')
+const {EXTERNAL_API_URL, MOVIE_PARAM, END_PARAMS, LOOKUP_TIME_SECONDS, PAGE_PARAM} = require('./constants')
 
 const mapOfWords = new Map();
 let cacheHit = 0;
 
-const fetchNewRequest = async (movieName) => {
-    const movies = await axios.get(EXTERNAL_API_URL.concat(MOVIE_PARAM).concat(movieName).concat(END_PARAMS))
+const fetchNewRequest = async (movieName, page) => {
+    const movies = await axios.get(
+        EXTERNAL_API_URL.concat(MOVIE_PARAM).concat(movieName).concat(PAGE_PARAM).concat(page).concat(END_PARAMS)
+    )
     .then(res => {
       const results = res.data.results;
       return results;
@@ -19,18 +21,18 @@ const fetchNewRequest = async (movieName) => {
 }
 
 
-const getListOfMovies = async (movieName) => {
-    if(mapOfWords.get(movieName)){
+const getListOfMovies = async (movieName, page) => {
+    if(mapOfWords.get(movieName.concat(page))){
         const now = new Date();
-        const {fetched, movies} = mapOfWords.get(movieName);
+        const {fetched, movies} = mapOfWords.get(movieName.concat(page));
         const timeDifference = now.getTime() - fetched.getTime();
         if(timeDifference < (LOOKUP_TIME_SECONDS * 1000)){
             cacheHit++;
             return movies;
         }
     }
-    const movies = await fetchNewRequest(movieName)
-        mapOfWords.set(movieName, {
+    const movies = await fetchNewRequest(movieName, page)
+        mapOfWords.set(movieName.concat(page), {
             fetched: new Date(),
             movies: movies
         })
@@ -41,10 +43,15 @@ const getListOfMovies = async (movieName) => {
 
 
 
-router.get('/:name', async (req, res) => {
-    const searchName = req.params.name;
-    const movies = await getListOfMovies(searchName)
-    res.send({cacheHit: cacheHit, movies: movies})
+router.get('/movie', async (req, res) => {
+    const searchName = req.query.name;
+    if (!searchName) {
+        return res.status(404).json({ message: 'No Search name provided' })
+      }
+
+    const page = req.query.page ?? 1;
+    const movies = await getListOfMovies(searchName, page);
+    res.send({cacheHit: cacheHit, movies: movies});
 })
 
 
