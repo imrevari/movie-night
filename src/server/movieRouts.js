@@ -14,7 +14,8 @@ const fetchNewRequest = async (movieName, page) => {
     )
     .then(res => {
       const results = res.data.results;
-      return results;
+      const totalPages = res.data.total_pages;
+      return {results, totalPages};
     }
       ).catch( error => {
         return error})
@@ -25,27 +26,31 @@ const fetchNewRequest = async (movieName, page) => {
 const getListOfMovies = async (movieName, page) => {
     if(mapOfWords.get(movieName.concat(page))){
         const now = new Date();
-        const {fetched, movies} = mapOfWords.get(movieName.concat(page));
+        const {fetched, movies, totalPages} = mapOfWords.get(movieName.concat(page));
         const timeDifference = now.getTime() - fetched.getTime();
         if(timeDifference < (LOOKUP_TIME_SECONDS * 1000)){
             cacheHit++;
-            return movies;
+            return {movies, totalPages};
         }
     }
-    const movies = await fetchNewRequest(movieName, page)
-    if(movies?.response){
+    
+    const response = await fetchNewRequest(movieName, page)
+    if(response?.response){
         return({
             error: true,
-            status: movies.response.status,
-            message: movies.response.data.status_message
+            status: response.response.status,
+            message: response.response.data.status_message
         })
     }
+        const {totalPages, results: movies} = response
         mapOfWords.set(movieName.concat(page), {
             fetched: new Date(),
-            movies: movies
+            movies: movies,
+            page: page,
+            totalPages: totalPages
         })
         cacheHit = 0;
-        return movies;
+        return {movies, totalPages};
 }
 
 
@@ -58,14 +63,14 @@ router.get('/movie', async (req, res) => {
       }
 
     const page = req.query.page ?? 1;
-    const movies = await getListOfMovies(searchName, page);
+    const {movies, totalPages} = await getListOfMovies(searchName, page);
 
     if(movies.error){
         const {status, message} = movies;
         return res.status(status).json({ message: message })
     }
 
-    res.send({cacheHit: cacheHit, movies: movies});
+    res.send({cacheHit, totalPages, movies: movies});
 })
 
 
