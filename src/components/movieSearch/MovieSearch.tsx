@@ -26,18 +26,26 @@ const MovieSearch: FC = () => {
     const [searchPhrase, setSearchPhrase] = useState<string>('')
     const [error, setError] = useState<string | null>(null)
 
+    const errorNotification = (message: string) => {
+        setFetchResponse(iniState);
+        setError(message)
+    }
+
     const fetchFromServer = (movieTitle: string, pageParam: number) =>{
         axios.get(
             LOCAL_BACKEND.concat(NAME_PARAM).concat(movieTitle).concat(PAGE_PARAM).concat(pageParam.toString())
         )
         .then(res => {
             const responseBody = res.data;
-
+            const { movies} = responseBody;
+            if(movies.length === 0){
+                errorNotification(`No movie found for ${movieTitle}`)
+                return;
+            }
             setFetchResponse(responseBody)
         }
           ).catch( error => {
-            setFetchResponse(iniState);
-            setError(error.response.data.message)
+            errorNotification(error.response.data.message)
           })
     }
 
