@@ -8,7 +8,8 @@ const {EXTERNAL_API_URL, MOVIE_PARAM, END_PARAMS, LOOKUP_TIME_SECONDS, PAGE_PARA
 const mapOfWords = new Map();
 let cacheHit = 0;
 
-const fetchNewRequest = async (movieName, page) => {
+const fetchNewRequest = async (name, page) => {
+    const movieName = '"'.concat(name).concat('"')
     const movies = await axios.get(
         EXTERNAL_API_URL.concat(MOVIE_PARAM).concat(movieName).concat(PAGE_PARAM).concat(page).concat(END_PARAMS)
     )

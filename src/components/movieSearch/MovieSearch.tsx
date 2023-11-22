@@ -64,9 +64,8 @@ const MovieSearch: FC = () => {
                         justifyContent: 'center'}}>
                 
                 <Chip 
-                    label={`Text goes here from API ${cashedFetches}`} 
-                    // variant="outlined"
-                    color={true ? 'default' : 'error'}
+                    label={`Number of calls from local API cache ${cashedFetches}`} 
+                    color={cashedFetches === 0 ? 'error' : 'default'}
                     sx={{marginTop: '20px', marginBottom: '10px', minWidth: '65%', }}/>
 
                 <Box sx={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center'}}>
