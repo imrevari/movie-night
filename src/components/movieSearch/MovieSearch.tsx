@@ -5,20 +5,25 @@ import SearchBar from "./SearchBar";
 
 import axios from "axios";
 import { LOCAL_BACKEND, NAME_PARAM, PAGE_PARAM } from "../../constants/constants";
-import { Movie } from "../../interfaces/interfaces";
+import { FetchMoviesResponse } from "../../interfaces/interfaces";
 import Paginator from "./Paginator";
 
 
 
 const MovieSearch: FC = () => {
 
-    const movies = new Array<Movie>;
+    const iniState = {
+        movies: [],
+        cacheHit: 0,
+        totalPages: 1
+    }
 
-    const [fetchedMovies, setFetchedMovies] = useState<Movie[]>([])
+    const [fetchResponse, setFetchResponse] = useState<FetchMoviesResponse>(iniState)
+
+    const {movies, cacheHit: cashedFetches, totalPages} = fetchResponse;
+
     const [page, setPage] = useState<number>(1)
     const [searchPhrase, setSearchPhrase] = useState<string>('')
-    const [cashedFetches, setCashedFetches] = useState<number>(0)
-    const [totalPages, setTotalPages] = useState<number>(1)
     const [error, setError] = useState<string | null>(null)
 
     const fetchFromServer = (movieTitle: string, pageParam: number) =>{
@@ -27,17 +32,13 @@ const MovieSearch: FC = () => {
         )
         .then(res => {
             const responseBody = res.data;
-            const {cacheHit, totalPages, movies} = responseBody;
-
-            setFetchedMovies(movies)
-            setCashedFetches(cacheHit)
-            setTotalPages(totalPages)
-
+            setFetchResponse(responseBody)
         }
           ).catch( error => console.log(error.response.data))
     }
 
-    const triggerSearch = (movieTitle: string) => {
+    const triggerSearch = (title: string) => {
+        const movieTitle = title.trim()
         setPage(1)
         setSearchPhrase(movieTitle)
         fetchFromServer(movieTitle, 1);
@@ -69,7 +70,7 @@ const MovieSearch: FC = () => {
                     sx={{marginTop: '20px', marginBottom: '10px', minWidth: '65%', }}/>
 
                 <Box sx={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center'}}>
-                    {fetchedMovies.map( (movie) => <MovieTile movie={movie}/>)} 
+                    {movies.map( (movie) => <MovieTile movie={movie}/>)} 
                 </Box>
 
                 <Paginator pages={totalPages} setPage={triggerPaginator} curentPage={page}/>
