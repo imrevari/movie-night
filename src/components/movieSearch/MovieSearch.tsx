@@ -1,4 +1,4 @@
-import { Box, Container, Pagination } from "@mui/material";
+import { Box, Chip, Container, Pagination, Typography } from "@mui/material";
 import { FC } from "react";
 import SearchBar from "./SearchBar";
 import MovieTile from "./MovieTile";
@@ -17,11 +17,17 @@ const MovieSearch: FC<any> = () => {
             <SearchBar />
             <br></br>
             <Box sx={{backgroundColor: '#e9f1f2', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center'}}>
-                <h3>test</h3>
+                
+                <Chip 
+                    label={'Text goes here from API'} 
+                    // variant="outlined"
+                    color={true ? 'default' : 'error'}
+                    sx={{marginTop: '20px', marginBottom: '10px', minWidth: '65%', }}/>
 
                 <Box sx={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center'}}>
                     {movies.map( (movie) => <MovieTile movie={movie}/>)} 
                 </Box>
+
                 <Paginator pages={5} setPage={(p: any) => console.log(p)}/>
             </Box>
         </Container>
