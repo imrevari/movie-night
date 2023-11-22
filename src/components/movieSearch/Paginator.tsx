@@ -1,11 +1,9 @@
 import { Pagination } from "@mui/material";
-import { FC, useState } from "react";
+import { FC } from "react";
 
 
 
 const Paginator: FC<any> = ({pages, setPage, curentPage}) => {
-
-
 
     return(
         <Pagination 
@@ -15,8 +13,6 @@ const Paginator: FC<any> = ({pages, setPage, curentPage}) => {
         onChange={(_, page) => setPage(page)}
         size="large"/>
     )
-
-
 }
 
 Paginator.displayName = 'Paginator';

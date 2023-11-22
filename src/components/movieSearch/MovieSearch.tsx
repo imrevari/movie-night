@@ -1,11 +1,11 @@
 import { Box, Chip, Container } from "@mui/material";
 import { FC, useState } from "react";
-import MovieTile from "./MovieTile";
 import SearchBar from "./SearchBar";
 
 import axios from "axios";
 import { LOCAL_BACKEND, NAME_PARAM, PAGE_PARAM } from "../../constants/constants";
 import { FetchMoviesResponse } from "../../interfaces/interfaces";
+import MovieTilesBox from "./MovieTilesBox";
 import Paginator from "./Paginator";
 
 
@@ -68,9 +68,7 @@ const MovieSearch: FC = () => {
                     color={cashedFetches === 0 ? 'error' : 'default'}
                     sx={{marginTop: '20px', marginBottom: '10px', minWidth: '65%', }}/>
 
-                <Box sx={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center'}}>
-                    {movies.map( (movie) => <MovieTile movie={movie}/>)} 
-                </Box>
+                <MovieTilesBox movies={movies}/>
 
                 <Paginator pages={totalPages} setPage={triggerPaginator} curentPage={page}/>
             </Box>
