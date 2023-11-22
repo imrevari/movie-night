@@ -1,4 +1,4 @@
-import { Box, Chip, Container } from "@mui/material";
+import { Alert, Box, Chip, Container, Snackbar } from "@mui/material";
 import { FC, useState } from "react";
 import SearchBar from "./SearchBar";
 
@@ -32,9 +32,13 @@ const MovieSearch: FC = () => {
         )
         .then(res => {
             const responseBody = res.data;
+
             setFetchResponse(responseBody)
         }
-          ).catch( error => console.log(error.response.data))
+          ).catch( error => {
+            setFetchResponse(iniState);
+            setError(error.response.data.message)
+          })
     }
 
     const triggerSearch = (title: string) => {
@@ -71,6 +75,17 @@ const MovieSearch: FC = () => {
                 <MovieTilesBox movies={movies}/>
 
                 <Paginator pages={totalPages} setPage={triggerPaginator} curentPage={page}/>
+
+                <Snackbar
+                    open={Boolean(error)}
+                    autoHideDuration={6000}
+                    onClose={() => setError(null)}
+                    >
+                        <Alert 
+                            severity="error"
+                            onClose={() => setError(null)}
+                        >{error}</Alert>
+                </Snackbar>
             </Box>
         </Container>
     )
