@@ -1,10 +1,10 @@
 export interface Movie {
-    adult: boolean;
+    adult?: boolean;
     id: number;
-    original_language: string;
-    original_title: string;
+    original_language?: string;
+    original_title?: string;
     overview: string;
-    popularity: number;
+    popularity?: number;
     poster_path: string | null;
     release_date: string,
     title: string;

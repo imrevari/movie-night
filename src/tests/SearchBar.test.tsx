@@ -1,7 +1,5 @@
-import React from 'react';
 import { fireEvent, render, screen } from '@testing-library/react';
 import SearchBar from '../components/movieSearch/SearchBar';
-import user from '@testing-library/user-event'
 
 
 const triggerSearchMock = jest.fn();
