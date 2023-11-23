@@ -1,7 +1,11 @@
 import { AppBar, Button, TextField, Toolbar, Typography } from "@mui/material";
 import { FC, useState } from "react";
 
-const SearchBar: FC<any> = ({triggerSearch}) => {
+interface SearchBarProps {
+    triggerSearch: (value: string) => void
+}
+
+const SearchBar: FC<SearchBarProps> = ({triggerSearch}) => {
 
     const [searchValue, setSearchValue] = useState<string>('')
 

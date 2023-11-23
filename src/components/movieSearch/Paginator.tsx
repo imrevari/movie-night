@@ -1,9 +1,13 @@
 import { Pagination } from "@mui/material";
 import { FC } from "react";
 
+interface PaginatorProps {
+    pages: number;
+    curentPage: number;
+    setPage: (page: number) => void
+}
 
-
-const Paginator: FC<any> = ({pages, setPage, curentPage}) => {
+const Paginator: FC<PaginatorProps> = ({pages, setPage, curentPage}) => {
 
     return(
         <Pagination
