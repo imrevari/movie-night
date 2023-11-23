@@ -58,7 +58,7 @@ const getListOfMovies = async (movieName, page) => {
 
 
 router.get('/movie', async (req, res) => {
-    const searchName = req.query.name;
+    const searchName = req.query.name.toLowerCase();
     if (!searchName) {
         return res.status(400).json({ message: 'No Search name provided' })
       }

@@ -23,9 +23,9 @@ const PopupWindow: FC<PopupWindowProps> = ({isOpen, closePopup, movie}) => {
           >
             <DialogTitle>{title}</DialogTitle>
             <DialogContent>
-              <DialogContentText sx={{marginBottom: '8px'}}>
+              { !isNaN(date.getFullYear()) && <DialogContentText sx={{marginBottom: '8px'}}>
                 {`Year released: ${date.getFullYear()}`}
-              </DialogContentText>
+              </DialogContentText>}
               <DialogContentText sx={{marginBottom: '8px'}}>
                 {`Avarage vote: ${voteAvarage.toFixed(2)} based on ${voteCount} votes`}
               </DialogContentText>

@@ -1,4 +1,4 @@
-import { Alert, Box, Chip, Container, Snackbar } from "@mui/material";
+import { Alert, Box, Chip, CircularProgress, Container, Skeleton, Snackbar } from "@mui/material";
 import { FC, useState } from "react";
 import SearchBar from "./SearchBar";
 
@@ -25,6 +25,7 @@ const MovieSearch: FC = () => {
     const [page, setPage] = useState<number>(1)
     const [searchPhrase, setSearchPhrase] = useState<string>('')
     const [error, setError] = useState<string | null>(null)
+    const [isLoading, setIsLoading] = useState<boolean>(false)
 
     const errorNotification = (message: string) => {
         setFetchResponse(iniState);
@@ -32,6 +33,7 @@ const MovieSearch: FC = () => {
     }
 
     const fetchFromServer = (movieTitle: string, pageParam: number) =>{
+        setIsLoading(true)
         axios.get(
             LOCAL_BACKEND.concat(NAME_PARAM).concat(movieTitle).concat(PAGE_PARAM).concat(pageParam.toString())
         )
@@ -40,12 +42,15 @@ const MovieSearch: FC = () => {
             const { movies} = responseBody;
             if(movies.length === 0){
                 errorNotification(`No movie found for ${movieTitle}`)
+                setIsLoading(false)
                 return;
             }
             setFetchResponse(responseBody)
+            setIsLoading(false)
         }
           ).catch( error => {
             errorNotification(error.response.data.message)
+            setIsLoading(false)
           })
     }
 
@@ -75,14 +80,23 @@ const MovieSearch: FC = () => {
                         flexDirection: 'column', 
                         justifyContent: 'center'}}>
                 
-                <Chip 
+                {isLoading
+                ?
+                <Skeleton variant="rounded" width={'65%'} height={32} 
+                    sx={{marginTop: '20px', marginBottom: '10px' }}/>
+                :
+                (movies.length > 0) && <Chip 
                     label={`Number of calls from local API cache ${cashedFetches}`} 
                     color={cashedFetches === 0 ? 'error' : 'default'}
-                    sx={{marginTop: '20px', marginBottom: '10px', minWidth: '65%', }}/>
+                    sx={{marginTop: '20px', marginBottom: '10px', minWidth: '65%', }}/>}
 
-                <MovieTilesBox movies={movies}/>
+                {isLoading
+                ? 
+                <CircularProgress size={190} sx={{margin: '20px 0 50px 0'}}/>
+                :
+                <MovieTilesBox movies={movies}/>}
 
-                {(totalPages > 1) && <Paginator pages={totalPages} setPage={triggerPaginator} curentPage={page}/>}
+                {(totalPages > 1 && !isLoading) && <Paginator pages={totalPages} setPage={triggerPaginator} curentPage={page}/>}
 
                 <Snackbar
                     open={Boolean(error)}
