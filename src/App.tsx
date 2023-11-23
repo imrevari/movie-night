@@ -1,9 +1,9 @@
-import MovieSearch from './components/movieSearch/MovieSearch';
+import MovieSearchApp from './components/movieSearch/MovieSearchApp';
 
 function App() {
   return (
     <div>
-      <MovieSearch />
+      <MovieSearchApp />
     </div>
   );
 }
