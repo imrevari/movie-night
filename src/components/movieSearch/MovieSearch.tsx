@@ -71,7 +71,7 @@ const MovieSearch: FC = () => {
 
     return(
         <Container >
-            <SearchBar triggerSearch={triggerSearch}/>
+            <SearchBar triggerSearch={triggerSearch} data-testid={'srach-bar-component'}/>
             <br></br>
             <Box sx={{backgroundColor: '#e9f1f2',
                         display: 'flex',

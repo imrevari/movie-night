@@ -18,11 +18,13 @@ const SearchBar: FC<any> = ({triggerSearch}) => {
                         onChange={(e) => setSearchValue(e.target.value)} 
                         variant="outlined"
                         label="Search for movies"
+                        data-testid={'search-field'}
                         />
             </Typography>
 
             <Button color="inherit" variant='outlined'
                 onClick={onSearchClick}
+                data-testid={'search-button'}
                 style={{maxWidth: '140px', minWidth: '140px', height: '56px', marginTop: '15px', marginBottom: '15px'}}
             >{'Search'}</Button>
         </Toolbar>

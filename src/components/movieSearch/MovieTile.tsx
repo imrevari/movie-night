@@ -30,18 +30,20 @@ const MovieTile: FC<MovieTileProps> = ({movie}) => {
     
             <CardMedia
                 sx={{ height: 290}}
+                data-testid={'card-picture'}
                 image={image}
                 title={title}
                 onClick={() => setShowInfo(true)}
             />
             <CardContent>
                 <Typography
+                    data-testid={'card-title'}
                     variant={variant} component="div">
                     {title}
                 </Typography>
             </CardContent>
 
-            {showInfo && <PopupWindow isOpen={showInfo} closePopup={closePopup} movie={movie} />}
+            {showInfo && <PopupWindow isOpen={showInfo} closePopup={closePopup} movie={movie} data-testid={'popup-component'}/>}
 
             {/* <CardActions>
                 <Button size="small">Watch</Button>

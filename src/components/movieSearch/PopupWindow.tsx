@@ -21,12 +21,12 @@ const PopupWindow: FC<PopupWindowProps> = ({isOpen, closePopup, movie}) => {
             open={isOpen}
             onClose={closePopup}
           >
-            <DialogTitle>{title}</DialogTitle>
+            <DialogTitle data-testid={'popup-title'}>{title}</DialogTitle>
             <DialogContent>
               { !isNaN(date.getFullYear()) && <DialogContentText sx={{marginBottom: '8px'}}>
                 {`Year released: ${date.getFullYear()}`}
               </DialogContentText>}
-              <DialogContentText sx={{marginBottom: '8px'}}>
+              <DialogContentText sx={{marginBottom: '8px'}} data-testid={'popup-avarege-vote-field'}>
                 {`Avarage vote: ${voteAvarage.toFixed(2)} based on ${voteCount} votes`}
               </DialogContentText>
               <Box
@@ -39,6 +39,7 @@ const PopupWindow: FC<PopupWindowProps> = ({isOpen, closePopup, movie}) => {
                   flexWrap: 'wrap'
                   
                 }}
+                data-testid={'popup-description'}
               >
                 {overview}
               </Box>
@@ -47,10 +48,12 @@ const PopupWindow: FC<PopupWindowProps> = ({isOpen, closePopup, movie}) => {
                 <Button variant='outlined'
                     color='inherit'
                     style={{maxWidth: '110px', minWidth: '110px'}}
+                    data-testid={'popup-watch-button'}
                     onClick={closePopup}>Watch</Button>
                 <Button variant='outlined'
                     color='error'
                     style={{maxWidth: '110px', minWidth: '110px'}}
+                    data-testid={'popup-close-button'}
                     onClick={closePopup}>Close</Button>
             </DialogActions>
           </Dialog>

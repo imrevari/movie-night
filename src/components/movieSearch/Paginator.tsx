@@ -6,7 +6,7 @@ import { FC } from "react";
 const Paginator: FC<any> = ({pages, setPage, curentPage}) => {
 
     return(
-        <Pagination 
+        <Pagination
         count={pages} 
         sx={{ margin: '15px 0 30px 0'}} 
         page={curentPage} 
