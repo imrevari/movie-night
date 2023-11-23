@@ -82,7 +82,7 @@ const MovieSearch: FC = () => {
 
                 <MovieTilesBox movies={movies}/>
 
-                <Paginator pages={totalPages} setPage={triggerPaginator} curentPage={page}/>
+                {(totalPages > 1) && <Paginator pages={totalPages} setPage={triggerPaginator} curentPage={page}/>}
 
                 <Snackbar
                     open={Boolean(error)}
