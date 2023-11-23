@@ -10,7 +10,7 @@ const MovieTilesBox: FC<MovieTilesBoxProp> = ({movies}) => {
 
     return(
         <Box sx={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center'}}>
-            {movies.map( (movie) => <MovieTile movie={movie}/>)} 
+            {movies.map( (movie) => <MovieTile movie={movie} key={movie.id}/>)} 
         </Box>
     )
 

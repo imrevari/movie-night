@@ -3,6 +3,8 @@ import { FC, useMemo, useState } from "react";
 import { Movie } from "../../interfaces/interfaces";
 
 import { NO_IMAGE, POSTER_URL } from '../../constants/constants';
+import PopupWindow from "./PopupWindow";
+;
 
 interface MovieTileProps {
     movie: Movie
@@ -10,39 +12,37 @@ interface MovieTileProps {
 
 const MovieTile: FC<MovieTileProps> = ({movie}) => {
 
-    const {poster_path: posterPath, title, overview} = movie
+    const {poster_path: posterPath, title} = movie
 
-    const [showInfo, setShowInfo] = useState<boolean>(true)
+    const [showInfo, setShowInfo] = useState<boolean>(false)
 
     const image = useMemo( () => {return posterPath ? POSTER_URL.concat(posterPath) : NO_IMAGE}, [posterPath])
 
+    const variant = useMemo( () => {return title.length > 28 ? 'h6' : 'h5'}, [title])
+
+    const closePopup = () => {
+        setShowInfo(prevState => !prevState)
+    }
+
+
     return(
-        <Card sx={{ maxWidth: 200, margin: '5px', maxHeight: 350, minHeight: 350, minWidth: 200}} 
-                onClick={() => setShowInfo(prevState => !prevState)}>
-            {showInfo
-            ? 
-            <>
-                <CardMedia
-                    sx={{ height: 220 }}
-                    image={image}
-                    title={title}
-                />
-                <CardContent>
-                    <Typography
-                        gutterBottom variant="h5" component="div">
-                        {title}
-                    </Typography>
-                </CardContent>
-            </>
-            :
-            <>
-                <CardContent>
-                <Typography variant="body2" color="text.secondary">
-                    {overview}
+        <Card sx={{ maxWidth: 200, margin: '5px', maxHeight: 410, minHeight: 410, minWidth: 200}}>
+    
+            <CardMedia
+                sx={{ height: 290}}
+                image={image}
+                title={title}
+                onClick={() => setShowInfo(true)}
+            />
+            <CardContent>
+                <Typography
+                    variant={variant} component="div">
+                    {title}
                 </Typography>
-                </CardContent>
-            </>
-            }
+            </CardContent>
+
+            {showInfo && <PopupWindow isOpen={showInfo} closePopup={closePopup} movie={movie} />}
+
             {/* <CardActions>
                 <Button size="small">Watch</Button>
             </CardActions> */}

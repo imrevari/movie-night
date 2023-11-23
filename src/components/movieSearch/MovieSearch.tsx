@@ -57,7 +57,7 @@ const MovieSearch: FC = () => {
     }
 
     const triggerPaginator = (selectedPage: number) =>{
-        if(selectedPage != page){
+        if(selectedPage !== page){
             setPage(selectedPage)
             fetchFromServer(searchPhrase, selectedPage);
         }  
